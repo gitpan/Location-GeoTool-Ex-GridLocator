@@ -1,0 +1,8 @@
+Changes
+MANIFEST			This list of files
+Makefile.PL
+README
+lib/Location/GeoTool/Ex/GridLocator.pm
+t/00_compile.t
+t/01_calc.t
+META.yml                                 Module meta-data (added by MakeMaker)

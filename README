@@ -1,0 +1,38 @@
+NAME
+    Location::GeoTool::Ex::GridLocator - Extension for Location::GeoTool
+
+SYNOPSIS
+  use Location::GeoTool::Ex::GridLocator;
+
+  my $geo = Location::GeoTool->create_coord('354345.000','1394437.000',"wgs84", "dmsn");
+
+  my $gl = $geo->get_gridlocator;  # PM95UR
+
+DESCRIPTION
+  Location::GeoTool::Ex::GridLocator extends the Location::GeoTool module.
+
+FUNCTIONS
+  If you use this module in your program, it add get_gridlocator method 
+  to Location::GeoTool.
+  Don't use Location::GeoTool::Ex::GridLocator as object constructor!
+  This is not subclass of Location::GeoTool::Ex::GridLocator, but extends
+   function of Location::GeoTool itself.
+
+  Please see the way to use this, please see upper SYNOPSIS part.
+  It contains the way to use this.
+
+NOTICE
+  This extension calcurates Grid Locator based on datum of Location::GeoTool
+  object.
+  So, if you want to make object by Tokyo datum but get Grid Locator in wgs84,
+  do like below:
+
+  my $geo = Location::GeoTool->create_coord('354345.000','1394437.000',"tokyo", "dmsn");
+
+  my $gl = $geo->datum_wgs84->get_gridlocator;
+
+AUTHOR
+    OHTSUKA Ko-hei <nene@kokogiko.net>
+
+    This library is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
